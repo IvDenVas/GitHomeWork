@@ -1,9 +1,17 @@
 import java.util.Scanner;
 import java.util.Stack;
+import java.util.logging.*;
 
 public class calc {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         try {
+            Logger logger = Logger.getLogger(calc.class.getName());
+            FileHandler fh = new FileHandler("forCalc.xml", true);
+            logger.addHandler(fh);
+            XMLFormatter xml = new XMLFormatter();
+            fh.setFormatter(xml);
+            logger.info("Запуск калькулятора");
+            
             Scanner scan = new Scanner(System.in);
             System.out.println("Введите выражение используя положительные однозначные числа (пробелы не важны!):");
             String inputFromUser = scan.nextLine().replace(" ", "");
