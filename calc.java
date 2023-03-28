@@ -5,7 +5,7 @@ public class calc {
     public static void main(String[] args) {
         try {
             Scanner scan = new Scanner(System.in);
-            System.out.println("Введите выражение ипользуя положительные однозначные числа (пробелы не важны!):");
+            System.out.println("Введите выражение используя положительные однозначные числа (пробелы не важны!):");
             String inputFromUser = scan.nextLine().replace(" ", "");
             // System.out.println(infixToPostfix(inputFromUser));
             String otvet = infixToPostfix(inputFromUser);
