@@ -3,24 +3,28 @@ import java.util.Stack;
 
 public class calc {
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        System.out.println("Введите выражение ипользуя положительные однозначные числа (пробелы не важны!):");
-        String inputFromUser = scan.nextLine().replace(" ", "");
-        System.out.println(infixToPostfix(inputFromUser));
-        String otvet = infixToPostfix(inputFromUser);
-        result(otvet);
-        System.out.println("Хотите отменить последнее действие (оператор)? y - да: ");
-        String inputFromUserAfetr = scan.nextLine();
-        scan.close();
-        if (inputFromUserAfetr.equals("y")) {
-            String s = "";
-            for (int i = 0; i < inputFromUser.toCharArray().length - 2; i++) {
-                s += inputFromUser.toCharArray()[i];
+        try {
+            Scanner scan = new Scanner(System.in);
+            System.out.println("Введите выражение ипользуя положительные однозначные числа (пробелы не важны!):");
+            String inputFromUser = scan.nextLine().replace(" ", "");
+            // System.out.println(infixToPostfix(inputFromUser));
+            String otvet = infixToPostfix(inputFromUser);
+            result(otvet);
+            System.out.println("Хотите отменить последнее действие (оператор)? y - да: ");
+            String inputFromUserAfetr = scan.nextLine();
+            scan.close();
+            if (inputFromUserAfetr.equals("y")) {
+                String s = "";
+                for (int i = 0; i < inputFromUser.toCharArray().length - 2; i++) {
+                    s += inputFromUser.toCharArray()[i];
+                }
+                result(infixToPostfix(s));
+                System.out.println("Программа завершена.");
+            } else {
+                System.out.println("Программа завершена.");
             }
-            result(infixToPostfix(s));
-            System.out.println("Программа завершена.");
-        } else {
-            System.out.println("Программа завершена.");
+        } catch (Exception e) {
+            System.out.println("Некорректный ввод!");
         }
     }
 
@@ -66,7 +70,7 @@ public class calc {
         System.out.printf("%d\n", st.pop());
     }
 
-    public static String infixToPostfix (String text) {
+    public static String infixToPostfix(String text) {
         Stack<String> stack = new Stack<>();
         String postfix = "";
 
@@ -89,7 +93,7 @@ public class calc {
         }
         return postfix;
     }
-    
+
     public static int prec(String string) {
         if (string == "*" || string == "/") {
             return 3;
