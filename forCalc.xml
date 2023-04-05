@@ -14,3 +14,34 @@
   <message>Запуск калькулятора</message>
 </record>
 </log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2023-04-05T08:29:44.341387500Z</date>
+  <millis>1680683384341</millis>
+  <nanos>387500</nanos>
+  <sequence>0</sequence>
+  <logger>calc</logger>
+  <level>INFO</level>
+  <class>calc</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Запуск калькулятора</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2023-04-05T09:30:06.463029Z</date>
+  <millis>1680687006463</millis>
+  <nanos>29000</nanos>
+  <sequence>0</sequence>
+  <logger>calc</logger>
+  <level>INFO</level>
+  <class>calc</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Запуск калькулятора</message>
+</record>
