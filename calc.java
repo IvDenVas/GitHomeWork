@@ -28,8 +28,10 @@ public class calc {
                 }
                 result(infixToPostfix(s));
                 System.out.println("Программа завершена.");
+                logger.info("Программа завершена");
             } else {
                 System.out.println("Программа завершена.");
+                logger.info("Программа завершена");
             }
         } catch (Exception e) {
             System.out.println("Некорректный ввод!");
